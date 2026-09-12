@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Python HTTP/1.1 Server</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="badge">RFC 7230 Compliant</div>
+            <h1>🚀 Async HTTP/1.1 Server</h1>
+            <p class="subtitle">Built entirely from scratch with raw TCP sockets and Python selectors</p>
+        </header>
+
+        <section class="card">
+            <h2>Features & Capabilities</h2>
+            <div class="grid">
+                <div class="feature-box">
+                    <h3>⚡ Non-Blocking I/O</h3>
+                    <p>Multiplexed event loop using <code>selectors.DefaultSelector</code> (epoll/kqueue) for high concurrency.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>🔄 Keep-Alive Lifecycle</h3>
+                    <p>Full HTTP/1.1 persistent connection support with pipelining & automated idle timeout sweep.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>📁 Static File Engine</h3>
+                    <p>MIME resolution, path-traversal sandboxing, Byte-range slicing, and ETag/304 caching.</p>
+                </div>
+                <div class="feature-box">
+                    <h3>🧵 Thread Pool Offload</h3>
+                    <p>Worker pool for non-blocking execution of compute tasks and file operations.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Live Interactive API Test</h2>
+            <div class="api-controls">
+                <button id="btn-health" class="btn">GET /api/health</button>
+                <button id="btn-time" class="btn">GET /api/time</button>
+                <button id="btn-post" class="btn">POST /api/echo</button>
+            </div>
+            <pre id="api-output" class="console-box">Click any button above to test live endpoints...</pre>
+        </section>
+
+        <footer>
+            <p>Antigravity Systems Engineering • Pure Python Standard Library</p>
+        </footer>
+    </div>
+    <script src="/static/app.js"></script>
+</body>
+</html>
